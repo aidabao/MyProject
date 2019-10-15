@@ -1,0 +1,126 @@
+{
+    "pages": [ //pages数组中第一项表示应用启动页
+        {
+            "path": "pages/index/index",
+            "style": {
+                "navigationBarTitleText": "首页",
+                "navigationBarBackgroundColor": "#eee"
+            }
+        },
+		{
+		    "path": "pages/index/contract",
+		    "style": {
+		        "navigationBarTitleText": "联系我们",
+		        "navigationBarBackgroundColor": "#eee"
+		    }
+		},      
+        {
+            "path": "pages/nav/nav",
+            "style": {
+                "navigationBarTitleText": "导航",
+                "navigationBarBackgroundColor": "#eee",
+				"navigationStyle":"custom"
+            }
+        },
+        {
+            "path": "pages/person/person",
+            "style": {
+                "navigationBarTitleText": "我的",
+                "navigationBarBackgroundColor": "#eee",
+				"app-plus":{"titleNView":false}
+            }
+        },        
+		{
+		    "path": "pages/find/find",
+		    "style": {				
+				"navigationBarTitleText": "发现",
+				"navigationBarBackgroundColor": "#4CD964",				
+		        "app-plus": {
+				    "bounce": "none",
+		            "titleNView": {
+		                "buttons": [ 
+		                    {
+		                        "text": "地图", 
+		                        "fontSize":"16",
+		                        "float": "right",
+		                        "color":"#fff"
+		                    },
+		                    {
+		                        "text": "郑州", 
+		                        "fontSize":"16",
+		                        "float": "left",
+		                        "color":"#fff"
+		                    }
+		                ],
+		                "searchInput":{
+		                    "align": "center",
+		                    "placeholder": "请输入关键字",
+		                    "borderRadius":"50upx",
+		                    "backgroundColor": "#fff"
+		                }
+				    }
+		        }
+			}
+        }
+	],
+    "globalStyle": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "uni-app",
+        "navigationBarBackgroundColor": "#FF0000",
+        "backgroundColor": "#F8F8F8"
+    },
+    "tabBar": {
+        "color": "#cdcdcd",
+        "selectedColor": "#39cffc",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "iconPath": "static/icon/index.png",
+                "selectedIconPath": "static/icon/indexsl.png",
+                "text": "首页"
+            }, {
+                "pagePath": "pages/find/find",
+                "iconPath": "static/icon/find.png",
+                "selectedIconPath": "static/icon/findsl.png",
+                "text": "发现"
+            },
+            {
+                "pagePath": "pages/nav/nav",
+                "iconPath": "static/icon/tab-cart.png",
+                "selectedIconPath": "static/icon/tab-cart-current.png",
+                "text": "导航"
+            }, {
+                "pagePath": "pages/person/person",
+                "iconPath": "static/icon/person.png",
+                "selectedIconPath": "static/icon/personsl.png",
+                "text": "我的"
+            }
+        ]
+    },
+
+    "condition": { //模式配置，仅开发期间生效
+        "current": 1, //当前激活的模式（list 的索引项）
+        "list": [{
+                "name": "首页", //模式名称
+                "path": "pages/index/index", //启动页面，必选
+                "query": "" //启动参数，在页面的onLoad函数里面得到。uid=100&t=1535987051
+            },
+            {
+                "name": "发现", //模式名称
+                "path": "pages/find/find", //启动页面，必选
+                "query": "" //启动参数，在页面的onLoad函数里面得到。
+            },
+            {
+                "name": "导航", //模式名称
+                "path": "pages/nav/nav", //启动页面，必选
+                "query": "" //启动参数，在页面的onLoad函数里面得到。uid=100&t=1535987051
+            },
+            {
+                "name": "我的", //模式名称
+                "path": "pages/person/person", //启动页面，必选
+                "query": "" //启动参数，在页面的onLoad函数里面得到。
+            }
+        ]
+    }
+}
